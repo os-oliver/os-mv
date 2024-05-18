@@ -1,0 +1,23 @@
+{
+    "name": "os-oliver/os-mv",
+    "description": "OpenSearch MV",
+    "keywords": ["alumni", "mv"],
+    "homepage": "https://github.com/os-oliver/os-mv.git",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "OsOliver\\OSMVBundle\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OsOliver\\OSMVBundle\\Tests\\": "Tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
