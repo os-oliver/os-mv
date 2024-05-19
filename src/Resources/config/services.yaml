@@ -2,3 +2,4 @@ services:
   opensearchmatview.service:
     class: OsOliver\OpenSearchMatViewBundle\Service\OpenSearchMatViewService
     public: true
+    autowire: true
