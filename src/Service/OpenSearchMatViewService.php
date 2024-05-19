@@ -25,7 +25,7 @@ class OpenSearchMatViewService
     private readonly Client $client;
 
     public function __construct(
-        private string $indexName,
+        // private string $indexName,
     ) {
         /*
         $this->client = OpenSearch\ClientBuilder::fromConfig([
