@@ -1,4 +1,4 @@
 services:
-  opensearchmatview.service.example:
+  opensearchmatview.service:
     class: OsOliver\OpenSearchMatViewBundle\Service\OpenSearchMatViewService
     public: true
