@@ -1,8 +1,8 @@
 services:
-#   OsOliver\OpenSearchMatViewBundle\Service\OpenSearchMatViewService:
-#     class: OsOliver\OpenSearchMatViewBundle\Service\OpenSearchMatViewService
-#     public: true
-#     autowire: true
-    _defaults:
+    OsOliver\OpenSearchMatViewBundle\Service\OpenSearchMatViewService:
+        class: OsOliver\OpenSearchMatViewBundle\Service\OpenSearchMatViewService
+        public: true
         autowire: true
-        autoconfigure: true
+    # _defaults:
+    #     autowire: true
+    #     autoconfigure: true
