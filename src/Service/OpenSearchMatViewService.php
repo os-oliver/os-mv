@@ -1,6 +1,6 @@
 <?php
 
-namespace OsOliver\OSMVBundle\Service;
+namespace OsOliver\OpenSearchMatViewBundle\Service;
 
 use App\Entity\Listing;
 use OpenSearch;
@@ -8,7 +8,7 @@ use OpenSearch\Client;
 use OpenSearch\ClientBuilder;
 use Symfony\Component\Uid\UuidV4;
 
-class OpenSearchMVService
+class OpenSearchMatViewService
 {
     public const LIST_INDEX = 'list';
     public const PAINLESS_ADD_USER = '

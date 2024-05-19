@@ -1,14 +1,14 @@
 <?php
 
-namespace OsOliver\OSMVBundle;
+namespace OsOliver\OpenSearchMatViewBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 /**
- * Class OSMVBundle.
+ * Class OpenSearchMatViewBundle.
  */
-class OSMVBundle extends Bundle
+class OpenSearchMatViewBundle extends Bundle
 {
     /**
      * @param ContainerBuilder $containerBuilder
@@ -21,7 +21,7 @@ class OSMVBundle extends Bundle
     public function getContainerExtension(): ?ExtensionInterface
     {
         if (null === $this->extension) {
-            return new OSMVBundleExtension();
+            return new OpenSearchMatViewBundleExtension();
         }
 
         return $this->extension;

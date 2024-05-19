@@ -10,12 +10,12 @@
     },
     "autoload": {
         "psr-4": {
-            "OsOliver\\OSMVBundle\\": "src/"
+            "OsOliver\\OpenSearchMatViewBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "OsOliver\\OSMVBundle\\Tests\\": "Tests/"
+            "OsOliver\\OpenSearchMatViewBundle\\Tests\\": "Tests/"
         }
     },
     "minimum-stability": "dev",
