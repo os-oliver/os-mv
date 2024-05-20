@@ -189,7 +189,7 @@ class OpenSearchMatViewService
     {
         $result = $this->client->create([
             'id' => $data['id'],
-            'index' => 'list',
+            'index' => self::LIST_INDEX,
             'body' => [
                 'client' => [
                     'id' => $data['clientId'],
@@ -210,7 +210,7 @@ class OpenSearchMatViewService
     {
         $result = $this->client->delete([
             'id' => $data['id'],
-            'index' => 'list',
+            'index' => self::LIST_INDEX,
         ]);
 
         return $result;
@@ -220,7 +220,7 @@ class OpenSearchMatViewService
     {
         $result = $this->client->update([
             'id' => $data['id'],
-            'index' => 'list',
+            'index' => self::LIST_INDEX,
             'body' => $data['updates'],
         ]);
 
@@ -230,7 +230,7 @@ class OpenSearchMatViewService
     public function addUserToList(array $data)
     {
         $result = $this->client->get([
-            'index' => 'list',
+            'index' => self::LIST_INDEX,
             'id' => $data['list'],
         ]);
 
@@ -270,7 +270,7 @@ class OpenSearchMatViewService
     public function deleteUserFromList(array $data)
     {
         $result = $this->client->get([
-            'index' => 'list',
+            'index' => self::LIST_INDEX,
             'id' => $data['list'],
         ]);
 
@@ -312,5 +312,51 @@ class OpenSearchMatViewService
                 ]
             ]
         ]);
+    }
+
+
+    public function createDocument(array $data)
+    {
+        $result = $this->client->create([
+            'id' => $data['id'],
+            'index' => $data['index'],
+            'body' => $data['body'],
+        ]);
+
+        return $result;
+    }
+
+    public function deleteDocument(array $data)
+    {
+        $result = $this->client->delete([
+            'id' => $data['id'],
+            'index' => $data['index'],
+        ]);
+
+        return $result;
+    }
+
+    public function updateDocument(array $data)
+    {
+        $result = $this->client->update([
+            'id' => $data['id'],
+            'index' => $data['index'],
+            'body' => $data['updates'],
+        ]);
+
+        return $result;
+    }
+
+    /**
+     * $id can be string only (uuid, or built-in ES identifier)
+     */
+    public function getDocument(string $index, $id)
+    {
+        $result = $this->client->get([
+            'index' => $index,
+            'id' => $id,
+        ]);
+
+        return $result;
     }
 }
